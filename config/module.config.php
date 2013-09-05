@@ -18,8 +18,9 @@ return array(
             'video-rest' => array(
                 'type'    => 'Segment',
                 'options' => array(
-                    'route'    => '/rest[/:id]',
+                    'route'    => '/rest[/:entity][/:id]',
                     'constraints' => array(
+                        'entity' => '[a-zA-Z0-9_-]+',
                         'id'     => '[0-9]+',
                     ),
                     'defaults' => array(
