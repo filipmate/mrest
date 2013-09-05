@@ -30,8 +30,8 @@ To add REST access to another table, you need to create its Entity and add it in
     'mrest' => array(
         'entities' => array(
             'example' => array(
-                'table' => 'table_name', \\ table in database, '\Module\Model\Entity'
-                'entity' => '\Module\Model\Entity', \\ entity, which extends \MRest\Model\Entity
+                'table' => 'table_name', // table in database, '\Module\Model\Entity'
+                'entity' => '\Module\Model\Entity', // entity, which extends \MRest\Model\Entity
             ),
         ),
     ),
