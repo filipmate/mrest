@@ -3,7 +3,7 @@ MRest
 
 Introduction
 ------------
-This is a simple, yet powerful Zend Framerok 2 module.
+This is a simple, yet powerful Zend Framerok 2 module, which allows REST access to database table only by add this table into config file.
 
 Installation
 ------------
@@ -17,7 +17,7 @@ Example
 -------
 
 To make example work you need to import path/to/application/modules/MRest/data/data.sql to your database.
-Now using you are able to:
+Now you are able to:
  * fetch list of database record - GET http://applicationpath/rest/exmapel
  * fetch single record - GET http://applicationpath/rest/exmapel/2
  * create record - PUT http://applicationpath/rest/exmapel
@@ -30,8 +30,8 @@ To add REST access to another table, you need to create its Entity and add it in
     'mrest' => array(
         'entities' => array(
             'example' => array(
-                'table' => 'table_name', \\ table in database, '\Module\Model\Entity'
-                'entity' => '\Module\Model\Entity', \\ entity, which extends \MRest\Model\Entity
+                'table' => 'table_name', // table in database, '\Module\Model\Entity'
+                'entity' => '\Module\Model\Entity', // entity, which extends \MRest\Model\Entity
             ),
         ),
     ),
