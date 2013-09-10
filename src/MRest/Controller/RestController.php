@@ -73,7 +73,7 @@ class RestController extends AbstractRestfulController
         {
             $sm = $this->getServiceLocator();
             $entityType = $this->getEvent()->getRouteMatch()->getParam('entity');
-            $this->mapper = $sm->get($entityType . '_mapper');
+            $this->mapper = $sm->get($entityType);
         }
         return $this->mapper;
     }

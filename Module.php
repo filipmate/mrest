@@ -39,7 +39,7 @@ class Module
                     $resultSetPrototype->setArrayObjectPrototype(new $entityConfig['entity']);
                     return new TableGateway($entityConfig['table'], $dbAdapter, null, $resultSetPrototype);
                 };
-                $factories['factories'][$entityName . '_mapper'] = function($sm) use ($entityConfig, $entityName)
+                $factories['factories'][$entityName] = function($sm) use ($entityConfig, $entityName)
                 {
                     return new \MRest\Model\Mapper(
                         $sm->get($entityName . '_table')
