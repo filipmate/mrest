@@ -3,7 +3,7 @@ namespace MRest\Model;
 
 use Zend\Db\TableGateway\TableGateway;
 
-class Mapper
+class Mapper implements MapperInterface
 {
     /**
      * @var \Zend\Db\TableGateway\TableGateway

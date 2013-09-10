@@ -65,7 +65,7 @@ class RestController extends AbstractRestfulController
     }
 
     /**
-     * @return \MRest\Model\Mapper
+     * @return \MRest\Model\MapperInterface
      */
     protected function getMapper()
     {
@@ -74,6 +74,10 @@ class RestController extends AbstractRestfulController
             $sm = $this->getServiceLocator();
             $entityType = $this->getEvent()->getRouteMatch()->getParam('entity');
             $this->mapper = $sm->get($entityType);
+        }
+        if (!($this->mapper instanceof \MRest\Model\MapperInterface))
+        {
+            throw new \Exception("Mapper don't implements \\MRest\\Model\\MapperInterface");
         }
         return $this->mapper;
     }

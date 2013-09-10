@@ -8,9 +8,9 @@ use Zend\InputFilter\InputFilterInterface;
 use Zend\Filter\Word\CamelCaseToUnderscore;
 use Zend\Filter\Word\UnderscoreToCamelCase;
 
-class Entity
+class Entity implements EntityInterface
 {
-    public function exchangeArray($data)
+    public function exchangeArray(array $data)
     {
         $filter = new CamelCaseToUnderscore();
         $objectVariablesArray = get_object_vars($this);
@@ -60,13 +60,7 @@ class Entity
 
     public function toArray()
     {
-        $arr = array();
-        $objectVariablesArray = get_object_vars($this);
-        foreach ($objectVariablesArray as $key => $value )
-        {
-            $arr[$key] = $this->$key;
-        }
-        return $arr;
+        return $this->getArrayCopy();
     }
 
     public function getArrayCopy()
