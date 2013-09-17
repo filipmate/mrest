@@ -18,11 +18,11 @@ Example
 
 To make example work you need to import path/to/application/modules/MRest/data/data.sql to your database.
 Now you are able to:
- * fetch list of database record - GET http://applicationpath/rest/exmapel
- * fetch single record - GET http://applicationpath/rest/exmapel/2
- * create record - PUT http://applicationpath/rest/exmapel
- * update record - POST http://applicationpath/rest/exmapel/2
- * delete record - DELETE http://applicationpath/rest/exmapel/2
+ * fetch list of database record - GET http://applicationpath/rest/example
+ * fetch single record - GET http://applicationpath/rest/example/2
+ * create record - PUT http://applicationpath/rest/example
+ * update record - POST http://applicationpath/rest/example/2
+ * delete record - DELETE http://applicationpath/rest/example/2
 
 
 To add REST access to another table, you need to create its Entity and add it in your module.config.php:
